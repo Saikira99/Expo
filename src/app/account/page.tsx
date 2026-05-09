@@ -4,11 +4,9 @@ import React from 'react';
 import { AnnouncementBar } from '@/components/AnnouncementBar';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
-import { 
-  User, Package, Heart, MapPin, CreditCard, 
-  Settings, LogOut, Bell, Award, ChevronRight, 
   Zap, CheckCircle2, Truck 
 } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 export default function AccountPage() {
   const menuItems = [
