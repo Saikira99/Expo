@@ -12,7 +12,7 @@ import { useToast } from '@/components/Toast';
 import Link from 'next/link';
 
 export default function CartPage() {
-  const { cart, addToCart, removeFromCart, clearCart } = useStore();
+  const { cart, removeFromCart, clearCart } = useStore();
   const { showToast } = useToast();
   
   const subtotal = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
@@ -42,7 +42,7 @@ export default function CartPage() {
                 <Trash2 size={40} className="text-primary/20" />
              </div>
              <h2 className="text-2xl font-bold text-primary mb-4">Your cart is empty</h2>
-             <p className="text-neutral-dark/50 mb-10">Looks like you haven't added any incubators to your cart yet.</p>
+             <p className="text-neutral-dark/50 mb-10">Looks like you haven&apos;t added any incubators to your cart yet.</p>
              <Link href="/">
                 <Button size="lg" className="rounded-2xl h-14 px-10">Start Shopping</Button>
              </Link>

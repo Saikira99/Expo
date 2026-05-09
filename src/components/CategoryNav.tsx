@@ -3,7 +3,6 @@
 import React from 'react';
 import { Menu, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
 
 const categories = [
   { name: "Fully Automatic", icon: "🥚" },

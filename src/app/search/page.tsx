@@ -35,7 +35,7 @@ export default function SearchPage() {
       <main className="max-w-7xl mx-auto px-6 py-12">
         <div className="mb-12">
           <h1 className="text-3xl font-heading font-bold text-primary mb-2">
-            Search Results for "{query}"
+            Search Results for &quot;{query}&quot;
           </h1>
           <p className="text-neutral-dark/50">Found {filteredProducts.length} items matching your search</p>
         </div>
