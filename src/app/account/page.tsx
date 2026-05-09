@@ -7,9 +7,8 @@ import { Footer } from '@/components/Footer';
 import { 
   User, Package, Heart, MapPin, CreditCard, 
   Settings, LogOut, Bell, Award, ChevronRight, 
-  Zap, Clock, CheckCircle2 
+  Zap, CheckCircle2, Truck 
 } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 export default function AccountPage() {
   const menuItems = [

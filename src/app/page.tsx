@@ -10,7 +10,6 @@ import {
   Star,
   Play
 } from 'lucide-react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { AnnouncementBar } from '@/components/AnnouncementBar';
 import { Navbar } from '@/components/Navbar';
