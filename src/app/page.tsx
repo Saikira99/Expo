@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { 
   Zap, 
   Clock, 
@@ -23,6 +23,23 @@ import { Button } from '@/components/Button';
 import { useToast } from '@/components/Toast';
 import { bestSellers, categoryShortcuts, trustBadges } from '@/lib/data';
 
+const letterVariants: Variants = {
+  hidden: { y: 120, opacity: 0, scale: 0, rotate: 45, filter: "blur(10px)" },
+  visible: (i: number) => ({
+    y: 0,
+    opacity: 1,
+    scale: 1,
+    rotate: 0,
+    filter: "blur(0px)",
+    transition: {
+      delay: i * 0.08,
+      type: "spring",
+      stiffness: 120,
+      damping: 12
+    }
+  })
+};
+
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const [showSplash, setShowSplash] = useState(true);
@@ -40,22 +57,7 @@ export default function Home() {
     return () => timers.forEach(clearTimeout);
   }, []);
 
-  const letterVariants = {
-    hidden: { y: 120, opacity: 0, scale: 0, rotate: 45, filter: "blur(10px)" },
-    visible: (i: number) => ({
-      y: 0,
-      opacity: 1,
-      scale: 1,
-      rotate: 0,
-      filter: "blur(0px)",
-      transition: {
-        delay: i * 0.08,
-        type: "spring",
-        stiffness: 120,
-        damping: 12
-      }
-    })
-  };
+
 
   if (!mounted) return <div className="min-h-screen bg-white" />;
 
@@ -338,10 +340,15 @@ export default function Home() {
             key="egg"
             initial={{ scale: 0, rotate: -20 }}
             animate={{ scale: [1, 1.05, 1], rotate: 0 }}
-            exit={{ scale: 2.5, opacity: 0, filter: "blur(40px)", rotate: 20 }}
+            exit={{ 
+              scale: 2.5, 
+              opacity: 0, 
+              filter: "blur(40px)", 
+              rotate: 20,
+              transition: { duration: 0.5, ease: "easeIn" }
+            }}
             transition={{ 
-              scale: { repeat: Infinity, duration: 0.8, ease: "easeInOut" },
-              exit: { duration: 0.5, ease: "easeIn" }
+              scale: { repeat: Infinity, duration: 0.8, ease: "easeInOut" }
             }}
             className="relative w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-secondary to-orange-500 rounded-[45%_45%_50%_50%] shadow-[0_40px_100px_rgba(245,158,11,0.5)] flex items-center justify-center border-b-8 border-black/10"
           >
