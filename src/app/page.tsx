@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
@@ -92,7 +92,7 @@ export default function Home() {
           <section className="max-w-7xl mx-auto px-6 py-12">
             <div className="flex items-center justify-between mb-8">
               <div className="flex items-center gap-4">
-                <h2 className="font-heading text-3xl font-bold text-primary">⚡ Deal of the Day</h2>
+                <h2 className="font-heading text-3xl font-bold text-primary">âš¡ Deal of the Day</h2>
                 <div className="flex items-center gap-2 bg-danger/10 text-danger px-4 py-1.5 rounded-full font-price text-xl">
                   <Clock size={20} />
                   <span>Ends in 04:23:15</span>
@@ -124,8 +124,8 @@ export default function Home() {
                   </div>
                   <h3 className="font-heading text-2xl font-bold text-primary mb-2">HatchMaster Pro 100</h3>
                   <div className="flex items-center gap-3 mb-6">
-                    <span className="font-price text-4xl text-primary font-black">₹5,499</span>
-                    <span className="text-lg text-neutral-dark/40 line-through">₹8,999</span>
+                    <span className="font-price text-4xl text-primary font-black">â‚¹5,499</span>
+                    <span className="text-lg text-neutral-dark/40 line-through">â‚¹8,999</span>
                     <span className="bg-danger text-white text-[10px] font-bold px-2 py-1 rounded-lg">38% OFF</span>
                   </div>
                   <div className="w-full bg-neutral-light rounded-full h-3 mb-4 p-0.5">
@@ -235,7 +235,7 @@ export default function Home() {
                    <div className="relative aspect-square">
                       <div className="absolute inset-0 bg-secondary/20 rounded-full blur-[100px]" />
                       <div className="relative h-full bg-white/5 backdrop-blur-xl rounded-[40px] border border-white/10 p-10 flex flex-col justify-center text-center">
-                         <div className="text-[120px] mb-8 animate-float">🐣</div>
+                         <div className="text-[120px] mb-8 animate-float">ðŸ£</div>
                          <h3 className="text-white font-heading text-3xl font-bold mb-4">Day 21: The Hatch</h3>
                          <div className="flex items-center gap-4">
                             <div className="flex-1 h-2 bg-white/10 rounded-full overflow-hidden">
@@ -251,7 +251,7 @@ export default function Home() {
 
           {/* RESTORING: Customer Reviews */}
           <section className="max-w-7xl mx-auto px-6 py-20 bg-neutral-light/30 rounded-[60px] mb-20 text-center">
-             <h2 className="font-heading text-4xl font-bold text-primary mb-4">💬 What Our Farmers Say</h2>
+             <h2 className="font-heading text-4xl font-bold text-primary mb-4">ðŸ’¬ What Our Farmers Say</h2>
              <p className="text-neutral-dark/60 mb-16">Join 50,000+ satisfied customers across India</p>
              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
                 {[1, 2, 3].map((i) => (
@@ -281,7 +281,7 @@ export default function Home() {
              <div className="bg-white rounded-[48px] border border-neutral-light shadow-2xl p-10 md:p-20 relative overflow-hidden flex flex-col md:flex-row items-center gap-16">
                 <div className="absolute top-0 left-0 w-2 h-full bg-primary" />
                 <div className="flex-1">
-                   <h2 className="font-heading text-4xl font-bold text-primary mb-6">🐣 Hatch Rate Calculator</h2>
+                   <h2 className="font-heading text-4xl font-bold text-primary mb-6">ðŸ£ Hatch Rate Calculator</h2>
                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
                       <div className="space-y-4">
                          <label className="text-[10px] font-black uppercase tracking-widest text-neutral-dark/40">Egg Species</label>
@@ -296,12 +296,12 @@ export default function Home() {
                       </div>
                    </div>
                    <div className="p-8 bg-primary/5 rounded-3xl border border-primary/10 flex items-center justify-between">
-                      <div className="text-3xl font-price font-black text-primary">85–95 Chicks</div>
+                      <div className="text-3xl font-price font-black text-primary">85â€“95 Chicks</div>
                       <Button className="rounded-2xl h-14 px-8 bg-primary text-white">Find My Match</Button>
                    </div>
                 </div>
                 <div className="w-full md:w-1/3 aspect-square bg-accent/20 rounded-[40px] flex items-center justify-center text-[120px]">
-                   🥚
+                   ðŸ¥š
                 </div>
              </div>
           </section>
@@ -456,5 +456,3 @@ export default function Home() {
     </div>
   );
 }
-/ /   v 1 . 0 . 1   -   B u i l d   S t a b i l i z a t i o n  
- 
