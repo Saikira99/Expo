@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Star, ShoppingCart, Eye, Zap, ShieldCheck, Play } from 'lucide-react';
+import { Heart, Star, ShoppingCart, Eye, Zap, ShieldCheck } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from './Button';

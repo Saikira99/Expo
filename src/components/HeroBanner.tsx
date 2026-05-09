@@ -2,14 +2,15 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Zap, Play, Star, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Play, Star, ShieldCheck } from 'lucide-react';
+import Image from 'next/image';
 import { Button } from './Button';
 import { cn } from '@/lib/utils';
 
 const slides = [
   {
     id: 1,
-    title: "Hatch More With India's #1 Incubator",
+    title: "Hatch More With India&apos;s #1 Incubator",
     subtitle: "Fully Automatic | Digital Control | 99.2% Hatch Rate",
     cta1: "Shop Now",
     cta2: "Watch Demo",
@@ -94,10 +95,11 @@ export const HeroBanner = () => {
               >
                 <div className="w-[450px] h-[450px] bg-white/20 backdrop-blur-xl rounded-[60px] shadow-2xl relative overflow-hidden border border-white/30 p-2 group">
                    <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                   <img 
+                   <Image 
                       src={slides[current].image} 
                       alt="Incubator" 
-                      className="w-full h-full object-cover rounded-[50px] transform group-hover:scale-105 transition-transform duration-700"
+                      fill
+                      className="object-cover rounded-[50px] transform group-hover:scale-105 transition-transform duration-700"
                    />
                    
                    <div className="absolute bottom-10 -left-10 bg-white/80 backdrop-blur p-4 rounded-3xl shadow-xl border border-white/50 animate-float">

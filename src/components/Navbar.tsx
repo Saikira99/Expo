@@ -7,7 +7,6 @@ import { cn } from '@/lib/utils';
 import { useStore } from '@/store/useStore';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from './Button';
-import { useToast } from './Toast';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);

@@ -19,11 +19,11 @@ export const Footer = () => {
                 <span className="font-heading text-3xl font-bold text-white">HatchNest</span>
               </div>
               <span className="text-[11px] text-white/60 font-medium tracking-tight mt-1">
-                "Hatch More. Lose Less. Earn More."
+                &quot;Hatch More. Lose Less. Earn More.&quot;
               </span>
             </Link>
             <p className="text-sm text-white/70 leading-relaxed max-w-xs">
-              India's most trusted provider of premium egg incubation equipment. We help farmers achieve industry-leading hatch rates.
+              India&apos;s most trusted provider of premium egg incubation equipment. We help farmers achieve industry-leading hatch rates.
             </p>
             <div className="flex items-center gap-4">
               {[MessageCircle, Camera, Play].map((Icon, i) => (

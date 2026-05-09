@@ -14,6 +14,7 @@ import {
   Star,
   Play
 } from 'lucide-react';
+import Image from 'next/image';
 import { AnnouncementBar } from '@/components/AnnouncementBar';
 import { Navbar } from '@/components/Navbar';
 import { CategoryNav } from '@/components/CategoryNav';
@@ -119,7 +120,9 @@ export default function Home() {
                      >
                         HATCHMASTER PRO SERIES
                      </motion.div>
-                     <img src="/h-1.png" alt="Deal" className="relative z-10 w-4/5 h-4/5 object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500" />
+                     <div className="relative z-10 w-4/5 h-4/5">
+                        <Image src="/h-1.png" alt="Deal" fill className="object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500" />
+                     </div>
                   </div>
                   <h3 className="font-heading text-2xl font-bold text-primary mb-2">HatchMaster Pro 100</h3>
                   <div className="flex items-center gap-3 mb-6">
@@ -192,7 +195,7 @@ export default function Home() {
               </div>
               <div className="relative z-10 w-full md:w-1/2 flex justify-center">
                 <div className="w-full aspect-[4/3] relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/10 hover:scale-105 transition-transform duration-500 group">
-                   <img src="/guide.png" alt="Guide" className="w-full h-full object-cover" />
+                   <Image src="/guide.png" alt="Guide" fill className="object-cover" />
                    <div className="absolute inset-0 bg-gradient-to-t from-[#064E3B]/60 to-transparent" />
                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                       <div className="w-20 h-20 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center border border-white/30">
@@ -261,7 +264,7 @@ export default function Home() {
                       ))}
                     </div>
                     <p className="text-neutral-dark/70 text-sm italic mb-8">
-                      "Got 97% hatch rate in my first batch! The solar backup is a lifesaver in my village."
+                      &quot;Got 97% hatch rate in my first batch! The solar backup is a lifesaver in my village.&quot;
                     </p>
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-full bg-primary/10" />
