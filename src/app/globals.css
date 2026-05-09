@@ -3,25 +3,105 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FDFCF0;
+  --foreground: #111827;
+  --primary: #064E3B;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F59E0B;
+  --secondary-foreground: #064E3B;
+  --accent: #FDFCF0;
+  --accent-foreground: #064E3B;
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.4);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #020617;
+    --foreground: #F3F4F6;
+    --primary-foreground: #FFFFFF;
+    --secondary-foreground: #020617;
+    --glass-bg: rgba(15, 23, 42, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.1);
   }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-[var(--glass-bg)] backdrop-blur-md border border-[var(--glass-border)] rounded-2xl;
+  }
+  
+  .glass-nav {
+    @apply sticky top-0 z-50 bg-[var(--glass-bg)] backdrop-blur-lg border-b border-[var(--glass-border)];
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  
+  .premium-blur {
+    backdrop-filter: blur(20px) saturate(180%);
+  }
+}
+
+/* 3D Design Utilities */
+.depth-1 {
+  box-shadow: 
+    0 1px 1px rgba(0,0,0,0.1), 
+    0 2px 2px rgba(0,0,0,0.1), 
+    0 4px 4px rgba(0,0,0,0.1), 
+    0 8px 8px rgba(0,0,0,0.1);
+}
+
+.depth-2 {
+  box-shadow: 
+    0 1px 1px rgba(0,0,0,0.05), 
+    0 2px 2px rgba(0,0,0,0.05), 
+    0 4px 4px rgba(0,0,0,0.05), 
+    0 8px 8px rgba(0,0,0,0.05),
+    0 16px 16px rgba(0,0,0,0.05);
+}
+
+.hover-3d {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hover-3d:hover {
+  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translateZ(10px);
+}
+
+.neo-morphism {
+  background: var(--background);
+  box-shadow: 20px 20px 60px #cfcfcf,
+             -20px -20px 60px #ffffff;
+}
+
+@layer utilities {
+  .text-shadow-premium {
+    text-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+}
+
+/* No Scrollbar Utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
